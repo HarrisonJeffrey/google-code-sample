@@ -29,3 +29,7 @@ class Video:
     def tags(self) -> Sequence[str]:
         """Returns the list of tags of a video."""
         return self._tags
+
+    def __str__(self):
+        """Changes string representation to title (video_id) [tags]"""
+        return f"{self.title} ({self.video_id}) [{' '.join(self.tags)}]"
