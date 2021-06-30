@@ -216,8 +216,8 @@ class VideoPlayer:
             print("If your answer is not a valid number, we will assume it's a no.")
             user_choice = input("")
             if user_choice.isnumeric():
-               if 0 < int(user_choice) <= len(matching_videos):
-                   self.play_video(matching_videos[int(user_choice)-1].video_id)
+                if 0 < int(user_choice) <= len(matching_videos):
+                    self.play_video(matching_videos[int(user_choice)-1].video_id)
 
     def search_videos(self, search_term):
         """Display all the videos whose titles contain the search_term.
