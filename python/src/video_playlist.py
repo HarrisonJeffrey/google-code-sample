@@ -18,3 +18,13 @@ class Playlist:
 
     def add_video(self, video):
         self._videos[video.video_id] = video
+
+    def remove_video(self, video, playlist_name):
+        deleted = self._videos.pop(video.video_id, None)
+        if deleted is None:
+            print(f"Cannot remove video from {playlist_name}: Video is not in playlist")
+        else:
+            print(f"Removed video from {playlist_name}: {video.title}")
+
+    def __str__(self):
+        return self.title
